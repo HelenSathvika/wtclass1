@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Message Format</title>
+</head>
+<body>
+<center>
+<h1><b>Message Format</b></h1>
+</center>
+<p>When a client and a web service communicate they exchange messages. A request message is sent from the client to the web service. The web service responds with a response message. This is just like in ordinary HTTP, where a web browser sends an HTTP request to a web server, and the web server replies with an HTTP response.</p>
+<br>
+<p>In the beginning the only web service message format available was SOAP. Later came REST type web services, which uses plain XML and HTTP. Following the REST movement came a wave of people using JSON (JavaScript Object Notation) as message format. Another very simple remoting protocol is called XML-RPC (XML Remote Procedure Call). Of these, the most common is SOAP and I will not get into details with these message formats here, since they will get their own tutorial trails later. I will just briefly mention what they look like.</p>
+<h2><b>Soap(Simple Object Access Protocol):</b></h2>
+<p>It is an XML based message format</p><br>
+<h3>Syntax:</h3>
+<ul
+</body>
+</html>
