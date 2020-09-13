@@ -11,7 +11,7 @@
 <br>
 <p>In the beginning the only web service message format available was SOAP. Later came REST type web services, which uses plain XML and HTTP. Following the REST movement came a wave of people using JSON (JavaScript Object Notation) as message format. Another very simple remoting protocol is called XML-RPC (XML Remote Procedure Call). Of these, the most common is SOAP and I will not get into details with these message formats here, since they will get their own tutorial trails later. I will just briefly mention what they look like.</p>
 <h2><b>Soap(Simple Object Access Protocol):</b></h2>
-<p>It is an XML based message format</p><br>
+<p>It is an XML based message format</p>
 <h3>Syntax:</h3>
 <ul>
     <li><h4>Envelope</h4></li>
@@ -24,5 +24,40 @@
       </ul>
     </ul>
   </ul>
+<p>The same SOAP message structure is used to send both requests and responses between client and web service.SOAP doesn't specify how a message gets from the client to the web service, although the most common scenario is via HTTP.</p>
+<h2><b>REST+XMl:</b></h2>
+<p>REST(Representational State Transfer) style web services work a bit different from SOAP web services. A REST request is a simple HTTP request just like a regular browser would send to a web server.There is typically no XML request sent. A REST response is typically an XML document sent back in a regular HTTP response, just as if a browser had requested it.</p>
+<h3>Syntax of http message:</h3>
+<p>HTTP message consists of an initial request line and an initial response line.</p>
+<h4>Format:HTTP-message = Request | Response ; HTTP/1.1 messages</h4>  
+<h3>1.Initial Request Line:</h3>
+<p>The initial line is different for the request and for the response. A request-line consists of three parts: a method name, requested resource's local path, and the HTTP version being used. All these parts are separated by spaces.</p>
+<h3>Syntax:</h3>
+<h4>GET /path/to/file/index.html HTTP/1.0</h4>
+<h4>GET is the most common HTTP methodThe path shows the part of the URL after the host name. It is also called a request URI.The version of HTTP always takes the form “HTTP/x.x”, uppercase.</h4>
+<h3>1.Initial Response Line:</h3>
+<p>The initial Response line is also known as the status line. It also has three parts: the HTTP version, a response status code that gives the result of the request, and the English reason phrase describing the status code.</p>
+<h3>Example:</h3>
+<h4>HTTP/1.0 200 OK  or  HTTP/1.0 404 Not Found </h4>
+<h3>Message Header:</h3>
+<p>The Message header provides information about the request and response. It also provides information about the object which is sent in the message body. Message Headers are of four types:
+
+1.General Header: It has general applicability for both request messages and response messages.
+2.Request Header: It has applicability only for the request messages.
+3.Response Header: It has applicability only for the response messages.
+4.Entity Header: It defines meta-information about the entity-body, and about the resource identified by request.</h4>
+<h4>Syntax</h4>
+<p>message-header = field-name ":" [ field-value ]</p>
+<h3>Message Body:</h3>
+<p>The message body of an HTTP message is used to carry the entire body associated with the request and response. The message-body differs from the entire-body only when a transfer-coding has been applied, as indicated by the Transfer-Encoding header field.</p>
+<h4>Syntax:</h4>
+<p>message-body = entity-body  
+        | <entity-body encoded as per Transfer-Encoding></p>
+<h3>Message Length:</h3>
+<p>The transfer-length of a message is the length of the message-body, and it appears in the message.</p>
+<h2><b>REST +JSON:</b></h2>
+<p>REST + JSON is basically the same as REST + XML except that data is transfered in JSON (JavaScript Object Notation) instead of XML.</p>
+<h2><b>XML RPC:</b></h2>
+<p>XML RPC is closer to SOAP than it is to REST. XML RPC has both a request and a response format. XML RPC is a somewhat simpler protocol than SOAP is.</p>
 </body>
 </html>
