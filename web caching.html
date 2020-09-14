@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Caching</title>
+</head>
+<body>
+<center>
+<h1><b>Web Caching</b></h1>
+</center>
+<p>Web caching is the activity of storing data for reuse, such as a copy of a web page served by a web server.</p>
+<p>It is cached or stored the first time a user visits the page and the next time a user requests the same page, a cache will serve the copy, which helps keep the origin server from getting overloaded.</p>
+<p>Web caching solutions and strategies enhance page delivery speed significantly and reduce the work needed to be done by the backend server.</p>
+<p>Caching servers can be set to refresh at specific intervals or in response to certain events to ensure that the freshest content is cached (useful for rapidly changing information, such as breaking news or rapidly changing pricing).</p>
+<p>Caching can also protect against total outages, delivering already cached content when servers are down.</p>
+<h2><b>Systems:</b></h2>
+<p>Web caches can be used in various systems</p>
+<h3>Forward Position System(recipient or client-side):</h3>
+<p>A forward cache is a cache outside the Web server's network.For example, if the back button is pressed, the locally cached version of a page may be displayed instead of a new request being sent to the Web server. A Web proxy sitting between the client and the server can evaluate HTTP headers and choose whether to store Web content.</p>
+<h3>Reverse Position System(content provider or web-server side):</h3>
+<p>A reverse cache sits in front of one or more Web servers and Web applications, accelerating requests from the Internet, reducing peak Web server load. A content delivery network (CDN) can retain copies of Web content at various points throughout a network.A search engine may also cache a website; it provides a way of retrieving information from websites that have recently gone down or a way of retrieving data more quickly than by clicking the direct link. Google, for instance, does so. Links to cached contents may be found in Google search results.</p>
+<h2><b>Cache-Control:</b></h2>
+<p>HTTP defines three basic mechanisms for controlling caches: freshness, validation, and invalidation</p>
+<h3>Freshness:</h3>
+<p>allows a response to be used without re-checking it on the origin server, and can be controlled by both the server and the client.</p>
+<h3>Validaton:</h3>
+<p>can be used to check whether a cached response is still good after it becomes stale.</p>
+<h3>Invalidation:</h3>
+<p>is usually a side effect of another request that passes through the cache.</p>
+<h2><b>Web Caching Softwares</b></h2>
+<p>Apache Http Server,aiScaler Dynamic Cache Control,Applian Sys Cachebox,Nginx,Squid etc..</p>
+</body>
+</html>
